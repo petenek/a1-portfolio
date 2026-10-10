@@ -1,0 +1,208 @@
+:root{
+    --navy: #0f2a4a;
+    --blue: #1a63c7;
+    --dark-blue: #124a9c;
+    --sky-blue: #97deff;
+    --ice: #eaf6ff;
+    --line: #5eb6e8;
+    --stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath transform='translate%2832 28%29 scale%281.15%29' fill='%231a63c7' fill-opacity='.10' d='M0 -12 C1.5 -4 4 -1.5 12 0 C4 1.5 1.5 4 0 12 C-1.5 4 -4 1.5 -12 0 C-4 -1.5 -1.5 -4 0 -12Z'/%3E%3Cpath transform='translate%2894 70%29 scale%281.5%29' fill='%231a63c7' fill-opacity='.09' d='M0 -12 C1.5 -4 4 -1.5 12 0 C4 1.5 1.5 4 0 12 C-1.5 4 -4 1.5 -12 0 C-4 -1.5 -1.5 -4 0 -12Z'/%3E%3Cpath transform='translate%2858 100%29 scale%28.7%29' fill='%235eb6e8' fill-opacity='.30' d='M0 -12 C1.5 -4 4 -1.5 12 0 C4 1.5 1.5 4 0 12 C-1.5 4 -4 1.5 -12 0 C-4 -1.5 -1.5 -4 0 -12Z'/%3E%3Cpath transform='translate%28100 14%29 scale%28.55%29' fill='%235eb6e8' fill-opacity='.28' d='M0 -12 C1.5 -4 4 -1.5 12 0 C4 1.5 1.5 4 0 12 C-1.5 4 -4 1.5 -12 0 C-4 -1.5 -1.5 -4 0 -12Z'/%3E%3C/svg%3E");
+}
+
+a{
+    color: var(--blue);
+
+}
+
+a:hover{
+    color: var(--dark-blue);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background: var(--sky-blue);
+    border-bottom: 3px solid var(--line);
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 8px 0;
+    margin: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown:hover .dropdown {
+    display: block;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown li a:hover   {
+    background-color: var(--ice);
+}
+
+.technologies-list {
+    width:264px;
+    overflow: hidden;
+}
+
+.track-title{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.technologies-track {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.4s ease;
+}
+
+.technologies-track li {
+    flex: 0 0 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technologies-used {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 2px solid var(--sky-blue);
+}
+
+.social-icons {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-circle img {
+    width: 32px;
+    height: 32px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    background-color: var(--ice);
+    background-image: var(--stars);
+    background-size: 150px 150px;
+    border-top: 4px solid var(--line);
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: Rubik, sans-serif;
+    color: var(--navy);
+    background-color: var(--ice);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    background-color: var(--ice);
+    background-image: var(--stars);
+    background-size: 150px 150px auto;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 64px 32px;
+}
+
+.hero-photo {
+    border-radius: 8px;
+    width: 300px;
+    height: auto;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.hero-text h1{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.1;
+    color: var(--blue);
+}
+
+.contact-socials h3{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.arrow:hover{
+    background: var(--dark-blue);
+}
