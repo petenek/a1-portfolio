@@ -6,7 +6,7 @@ const total = projectTrack.children.length;
 let index = 0;
 
 function showProject(i) {
-    index = (i + total) % total; // wraps around at both ends
+    index = (i + total) % total;
     projectTrack.style.transform = `translateX(${-index * 100}%)`;
 }
 

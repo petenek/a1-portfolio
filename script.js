@@ -4,7 +4,7 @@ const rightArrow = document.querySelector('.arrow-right');
 
 const visible = 3;
 const itemWidth = 88;
-const GroupWidth = visible * itemWidth; // 264
+const GroupWidth = visible * itemWidth;
 const totalGroups = Math.ceil(track.children.length / visible);
 
 let currentGroup = 0;
