@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="styles.css">
   <title>Projects | Peter Nguyen</title>
 </head>
+
 <body>
+
   <header>
     <a href="index.html" class="logo">Peter Nguyen</a>
     <nav>
@@ -35,6 +37,34 @@
   <main>
     <section class="projects">
       <h1>Projects</h1>
+
+      <div class="project-carousel">
+        <button class="project-arrow project-prev" type="button" aria-label="Previous project">&#8592;</button>
+
+        <div class="project-track">
+        <article class="project-slide">
+            <img src="images/FriendlyFire.png" alt="Screenshot of FriendlyFire">
+            <div class="project-info">
+              <h2>FriendlyFire</h2>
+              <p>A sports social platform where users create and join events on a map. Hosted on Render.</p>
+              <p class="project-tech">Flask · SQLite · HTML · CSS · JavaScript · Python</p>
+              <a href="#" class="project-link">View on GitHub</a>
+            </div>
+          </article>
+          
+          <article class="project-slide">
+            <img src="images/Portfolio.png" alt="Screenshot of this portfolio website">
+            <div class="project-info">
+              <h2>Portfolio Website</h2>
+              <p>A personal portfolio website built with HTML, CSS, and JavaScript. Created as a way to showcase my projects, skills, and contact info.</p>
+              <p class="project-tech">HTML · CSS · JavaScript · Bootstrap</p>
+              <a href="#" class="project-link">View on GitHub</a>
+            </div>
+          </article>
+        </div>
+
+        <button class="project-arrow project-next" type="button" aria-label="Next project">&#8594;</button>
+      </div>
     </section>
   </main>
 
