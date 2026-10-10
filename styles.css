@@ -78,10 +78,7 @@ nav ul {
 }
  
 .track-title{
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
     font-size: 24px;
-    font-weight: 700;
     align-self: center;
 }
  
@@ -129,12 +126,7 @@ nav ul {
     gap: 12px;
 }
  
-.social-icons img {
-    width: 32px;
-    height: 32px;
-}
- 
-.icon-circle img {
+.social-icons img, .icon-circle img {
     width: 32px;
     height: 32px;
 }
@@ -149,6 +141,7 @@ footer {
     background-image: var(--stars);
     background-size: 150px 150px;
     border-top: 4px solid var(--line);
+    flex-wrap: wrap;
 }
  
 html, body {
@@ -173,7 +166,6 @@ main {
  
 .hero {
     display: flex;
-    flex-wrap: nowrap; /* keep photo left, text right */
     align-items: center;
     gap: 40px;
     padding: 64px 32px;
@@ -182,13 +174,13 @@ main {
 .hero-photo {
     border-radius: 8px;
     width: 300px;
-    max-width: 40%; /* shrinks on smaller screens */
+    max-width: 40%;
     height: auto;
     flex-shrink: 0;
 }
  
 .hero-text {
-    min-width: 0; /* lets the text column shrink instead of overflowing */
+    min-width: 0;
 }
  
 .hero-text p {
@@ -197,27 +189,17 @@ main {
 }
  
 .hero-text h1{
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 700;
     font-size: 50px;
     line-height: 1.1;
     color: var(--blue);
 }
  
 .contact-socials h2{
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 700;
     font-size: 22px;
 }
  
 .arrow:hover{
     background: var(--dark-blue);
-}
- 
-footer {
-    flex-wrap: wrap;
 }
  
 .has-dropdown:focus-within .dropdown {
@@ -278,9 +260,6 @@ footer {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 700;
     font-size: 24px;
     text-decoration: none;
 }
@@ -318,9 +297,6 @@ footer {
 }
 
 .project-info h2 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 700;
     font-size: 32px;
     color: var(--blue);
     margin: 0 0 12px;
@@ -381,4 +357,18 @@ footer {
     .project-info p {
         font-size: 16px;
     }
+}
+
+.projects h1{
+    font-size: 50px;
+    color: var(--navy);
+    text-align: center;
+    margin: 0;
+    padding: 32px;
+}
+
+.logo, .track-title, .contact-socials h2, .hero-text h1, projects h1, project-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
 }
