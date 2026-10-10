@@ -8,6 +8,7 @@ const GroupWidth = visible * itemWidth; // 264
 const totalGroups = Math.ceil(track.children.length / visible);
 
 let currentGroup = 0;
+let autoSwipeTimer;
 
 function goToGroup(groupIndex) {
     currentGroup=groupIndex;
@@ -25,8 +26,21 @@ function prevGroup() {
 
 leftArrow.addEventListener('click', () => {
     prevGroup();
+    resetAutoSwipe();
 });
 
 rightArrow.addEventListener('click', () => {
     nextGroup();
+    resetAutoSwipe();
 });
+
+function startAutoSwipe() {
+    autoSwipeTimer = setInterval(nextGroup, 3000);
+}
+
+function resetAutoSwipe() {
+    clearInterval(autoSwipeTimer);
+    startAutoSwipe();
+}
+
+startAutoSwipe();
