@@ -166,7 +166,7 @@ main {
     flex: 1;
     background-color: var(--ice);
     background-image: var(--stars);
-    background-size: 150px 150px auto;
+    background-size: 150px 150px;
 }
 
 .hero {
@@ -199,7 +199,7 @@ main {
 .contact-socials h3{
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-weight: 699;
+    font-weight: 700;
     font-size: 22px;
 }
 
