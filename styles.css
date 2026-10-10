@@ -132,16 +132,11 @@ nav ul {
 }
  
 footer {
-    display: flex;
-    justify-content: center;
-    gap: 96px;
-    align-items: center;
     padding: 24px 32px;
     background-color: var(--ice);
     background-image: var(--stars);
     background-size: 150px 150px;
     border-top: 4px solid var(--line);
-    flex-wrap: wrap;
 }
  
 html, body {
@@ -218,16 +213,6 @@ main {
  
     .hero-text p {
         font-size: 16px;
-    }
- 
-    footer {
-        flex-direction: column;
-        gap: 24px;
-        text-align: center;
-    }
- 
-    .social-icons {
-        justify-content: center;
     }
  
     header {
