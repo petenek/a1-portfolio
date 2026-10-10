@@ -1,0 +1,32 @@
+const track = document.querySelector('.technologies-track');
+const leftArrow = document.querySelector('.arrow-left');
+const rightArrow = document.querySelector('.arrow-right');
+
+const visible = 3;
+const itemWidth = 88;
+const GroupWidth = visible * itemWidth; // 264
+const totalGroups = Math.ceil(track.children.length / visible);
+
+let currentGroup = 0;
+
+function goToGroup(groupIndex) {
+    currentGroup=groupIndex;
+    const offset = -(currentGroup * GroupWidth);
+    track.style.transform = `translateX(${offset}px)`;
+}
+
+function nextGroup() {
+    goToGroup((currentGroup + 1) % totalGroups);
+}
+
+function prevGroup() {
+    goToGroup((currentGroup - 1 + totalGroups) % totalGroups);
+}
+
+leftArrow.addEventListener('click', () => {
+    prevGroup();
+});
+
+rightArrow.addEventListener('click', () => {
+    nextGroup();
+});
