@@ -17,6 +17,15 @@ a{
 a:hover{
     color: var(--dark-blue);
 }
+
+.hero-text p,
+.project-info p,
+.about-text p,
+.experience-info p,
+.experience-info li {
+    font-size: 18px;
+    line-height: 1.6;
+}
  
 header {
     display: flex;
@@ -58,7 +67,7 @@ nav ul {
     position: relative;
 }
  
-.has-dropdown:hover .dropdown {
+.has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown {
     display: block;
 }
  
@@ -176,11 +185,6 @@ main {
     min-width: 0;
 }
  
-.hero-text p {
-    font-size: 18px;
-    line-height: 1.6;
-}
- 
 .hero-text h1{
     font-size: 50px;
     line-height: 1.1;
@@ -190,57 +194,6 @@ main {
 .contact-socials h2{
     font-size: 22px;
 }
- 
-.arrow:hover{
-    background: var(--dark-blue);
-}
- 
-.has-dropdown:focus-within .dropdown {
-    display: block;
-}
- 
-@media (max-width: 700px) {
-    .hero {
-        gap: 20px;
-        padding: 32px 16px;
-    }
- 
-    .hero-text h1 {
-        font-size: 32px;
-    }
- 
-    .hero-text p {
-        font-size: 16px;
-    }
- 
-    header {
-        padding: 12px 16px;
-    }
-}
- 
-@media (max-width: 480px) {
-    .hero {
-        gap: 12px;
-    }
- 
-    .hero-text h1 {
-        font-size: 24px;
-    }
- 
-    .hero-text p {
-        font-size: 14px;
-    }
-}
- 
-@media (max-width: 400px) {
-    .hero {
-        flex-direction: column;
-    }
- 
-    .hero-photo {
-        max-width: 60%;
-    }
-}
 
 .logo {
     font-size: 24px;
@@ -248,7 +201,7 @@ main {
 }
 
 .project-carousel {
-    --img-height: 60vh; /* image height; arrows center on this */
+    --img-height: 60vh;
     position: relative;
     overflow: hidden;
 }
@@ -286,8 +239,6 @@ main {
 }
 
 .project-info p {
-    font-size: 18px;
-    line-height: 1.6;
     margin: 0 0 12px;
 }
 
@@ -316,7 +267,7 @@ main {
     cursor: pointer;
 }
 
-.project-arrow:hover {
+.project-arrow:hover, .arrow:hover {
     background: var(--dark-blue);
 }
 
@@ -326,20 +277,6 @@ main {
 
 .project-next {
     right: 16px;
-}
-
-@media (max-width: 700px) {
-    .project-info {
-        padding: 20px 16px 32px;
-    }
-
-    .project-info h2 {
-        font-size: 26px;
-    }
-
-    .project-info p {
-        font-size: 16px;
-    }
 }
 
 .projects h1, .experience h1, .certifications h1, .resume h1 {
@@ -387,8 +324,7 @@ main {
     line-height: 1.2;
 }
 
-.about-tab::before,
-.about-tab::after {
+.about-tab::before, .about-tab::after, cta-button::before, .cta-button::after {
     content: "";
     width: 12px;
     height: 12px;
@@ -459,12 +395,10 @@ main {
 
 .cta-button::before,
 .cta-button::after {
-    content: "";
     position: absolute;
     top: 50%;
     width: 14px;
     height: 14px;
-    background: var(--star-sky) center / contain no-repeat;
     transform: translateY(-50%);
     transition: transform 0.3s ease;
 }
@@ -506,7 +440,6 @@ main {
     width: 40%;
     flex-shrink: 0;
     border-radius: 8px;
-    object-fit: cover;
 }
 
 .experience-info {
@@ -528,11 +461,6 @@ main {
     font-weight: 500;
     color: var(--dark-blue);
     margin: 0 0 12px;
-}
-
-.experience-info p {
-    font-size: 18px;
-    line-height: 1.6;
 }
 
 .resume p {
@@ -557,6 +485,33 @@ main {
 }
 
 @media (max-width: 700px) {
+    header {
+        padding: 12px 16px;
+    }
+
+    .hero {
+        gap: 20px;
+        padding: 32px 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p,
+    .project-info p,
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .project-info {
+        padding: 20px 16px 32px;
+    }
+
+    .project-info h2 {
+        font-size: 26px;
+    }
+
     .about-tab {
         font-size: 18px;
         left: 24px;
@@ -567,12 +522,6 @@ main {
         border-radius: 24px;
     }
 
-    .about-text p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 700px) {
     .experience-card {
         flex-direction: column;
         padding: 16px;
@@ -580,5 +529,29 @@ main {
 
     .experience-photo {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        gap: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-photo {
+        max-width: 60%;
     }
 }
