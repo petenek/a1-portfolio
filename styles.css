@@ -342,7 +342,7 @@ main {
     }
 }
 
-.projects h1{
+.projects h1, .experience h1, .certifications h1, .resume h1 {
     font-size: 50px;
     color: var(--navy);
     text-align: center;
@@ -350,7 +350,7 @@ main {
     padding: 32px;
 }
 
-.logo, .track-title, .contact-socials h2, .hero-text h1, .projects h1, .project-info h2, .about-tab, .experience h1, .experience-info h2 {
+.logo, .track-title, .contact-socials h2, .hero-text h1, .projects h1, .project-info h2, .about-tab, .experience h1, .certifications h1, .resume h1, .experience-info h2 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 700;
@@ -493,10 +493,6 @@ main {
     outline-offset: 3px;
 }
 
-.experience h1 {
-    text-align: center;
-}
-
 .experience-card {
     display: flex;
     align-items: center;
@@ -537,6 +533,12 @@ main {
 .experience-info p {
     font-size: 18px;
     line-height: 1.6;
+}
+
+.resume p {
+    font-size: 22px;
+    text-align: center;
+    padding: 32px;
 }
 
 @media (min-width: 768px) {
